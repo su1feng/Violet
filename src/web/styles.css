@@ -1,0 +1,58 @@
+:root {
+  color-scheme: dark;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; }
+button { cursor: pointer; font: inherit; }
+
+.app { display: flex; height: 100vh; background: #121218; color: #e6e6ea; }
+
+.sidebar { width: 260px; border-right: 1px solid #26262e; display: flex; flex-direction: column; }
+.sidebar-header { display: flex; align-items: center; justify-content: space-between; padding: 14px; }
+.sidebar-header h1 { font-size: 18px; letter-spacing: 1px; }
+.bot-list { list-style: none; padding: 0 8px; }
+.bot-list li { display: flex; align-items: center; border-radius: 8px; }
+.bot-list li.active { background: #1f1f28; }
+.bot-name { flex: 1; background: none; border: none; color: inherit; text-align: left; padding: 8px 10px; }
+.bot-actions button { background: none; border: none; color: #8888a0; padding: 4px; }
+.bot-actions button:hover { color: #e6e6ea; }
+.threads { margin-top: auto; padding: 8px; border-top: 1px solid #26262e; max-height: 40vh; overflow: auto; }
+.threads-header { display: flex; justify-content: space-between; align-items: center; padding: 4px 8px; color: #8888a0; font-size: 12px; }
+.threads ul { list-style: none; padding: 0; }
+.threads li.active button { color: #fff; background: #1f1f28; }
+.threads button { display: block; width: 100%; text-align: left; background: none; border: none; color: #a0a0b4; padding: 8px 10px; border-radius: 8px; }
+.sidebar-footer { padding: 12px 14px; font-size: 12px; color: #8888a0; border-top: 1px solid #26262e; }
+
+.chat { flex: 1; display: flex; flex-direction: column; min-width: 0; }
+.chat-header { display: flex; justify-content: space-between; align-items: center; padding: 12px 20px; border-bottom: 1px solid #26262e; }
+.chat-header .danger { background: none; border: 1px solid #5c2a2a; color: #e08a8a; border-radius: 8px; padding: 4px 12px; }
+.messages { flex: 1; overflow-y: auto; padding: 20px; display: flex; flex-direction: column; gap: 12px; }
+.empty { color: #8888a0; margin: auto; }
+.bubble { max-width: 72ch; padding: 10px 14px; border-radius: 12px; white-space: pre-wrap; word-break: break-word; }
+.bubble.user { align-self: flex-end; background: #2b4a8a; }
+.bubble.assistant { align-self: flex-start; background: #1f1f28; }
+.bubble .tools { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 6px; font-size: 12px; color: #8888a0; }
+.composer { display: flex; gap: 10px; padding: 14px 20px; border-top: 1px solid #26262e; }
+.composer textarea { flex: 1; resize: none; height: 64px; background: #1f1f28; color: inherit; border: 1px solid #33333f; border-radius: 10px; padding: 10px; }
+.composer button { background: #2b4a8a; color: #fff; border: none; border-radius: 10px; padding: 0 20px; }
+.composer button:disabled { opacity: 0.4; cursor: default; }
+
+.approvals { position: fixed; right: 16px; top: 16px; display: flex; flex-direction: column; gap: 10px; z-index: 10; }
+.approval-card { width: 320px; background: #221c14; border: 1px solid #6b5423; border-radius: 12px; padding: 12px; }
+.approval-title { font-weight: 600; margin-bottom: 8px; color: #f0c674; }
+.approval-card pre { max-height: 160px; overflow: auto; font-size: 11px; color: #b8b8c8; }
+.approval-actions { display: flex; gap: 8px; margin-top: 8px; }
+.approval-actions .allow { flex: 1; background: #2e6b46; color: #fff; border: none; border-radius: 8px; padding: 6px; }
+.approval-actions .deny { flex: 1; background: #6b2e2e; color: #fff; border: none; border-radius: 8px; padding: 6px; }
+
+.modal { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.5); display: flex; align-items: center; justify-content: center; }
+.modal-card { width: 420px; background: #1a1a22; border: 1px solid #33333f; border-radius: 14px; padding: 20px; display: flex; flex-direction: column; gap: 12px; }
+.modal-card label { display: flex; flex-direction: column; gap: 4px; font-size: 13px; color: #a0a0b4; }
+.modal-card input, .modal-card textarea, .modal-card select { background: #121218; color: inherit; border: 1px solid #33333f; border-radius: 8px; padding: 8px; font: inherit; }
+.modal-actions { display: flex; justify-content: flex-end; gap: 8px; }
+.modal-actions button { background: #2a2a35; color: inherit; border: none; border-radius: 8px; padding: 8px 16px; }
+.modal-actions .allow { background: #2e6b46; }
+.error { color: #e08a8a; font-size: 13px; }
+.toast { position: fixed; left: 50%; bottom: 16px; transform: translateX(-50%); background: #3a1f1f; border: 1px solid #6b2e2e; padding: 8px 16px; border-radius: 10px; font-size: 13px; cursor: pointer; }
+
