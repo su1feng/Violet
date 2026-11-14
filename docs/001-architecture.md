@@ -126,7 +126,7 @@ sessions(thread_id, executor_id, ref, created_at, last_used_at,
 
 原则：**只存查不回来的东西。** 已经在别处的东西存指针。
 
-加载策略是两层：索引常驻上下文，正文由 agent 主动 `memory_read` 取。不要一次全塞进去，见 [principle-guard-the-context-window]。
+加载策略是两层：索引常驻上下文，正文由 agent 主动 `memory_read` 取。不要一次全塞进去——上下文被塞满会让推理质量下降，而不是只会变慢。
 
 ## 端口
 

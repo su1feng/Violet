@@ -16,9 +16,11 @@ Violet 是一个**常驻的个人 agent**：在你自己的机器上长期运行
 
 每个部分都按这条原则判断：一条消息、一次提问、一个面板元素、一个设置项，都要给出比它消耗的注意力更多的价值，否则删掉。
 
-这条原则来自 [dsh-superagent](../../学习) 的 `000-philosophy.md`，它把这个想法写得比我们能写的更准确：
+这条原则来自 DeepSeek 的 dsh-superagent 研究原型（MIT 许可），它的 `000-philosophy.md` 把这个想法写得比我们能写的更准确：
 
 > 一个能为整个团队行动的 agent，也能浪费整个团队的时间。
+>
+> —— "An agent that can act for a whole team can also waste a whole team's attention."
 
 个人 agent 的问题完全一样，只是规模从"团队"变成"你自己"。
 
