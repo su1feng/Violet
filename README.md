@@ -36,6 +36,8 @@ Violet 是给自己用的：一个在你自己的机器上长期运行、由你�
 - [004 执行器](docs/004-executors.md)
 - [005 路线图](docs/005-roadmap.md)
 - [006 决策记录](docs/006-decisions.md)
+- [007 质量工程](docs/007-quality.md)
+- [给 agent 的工程规则](docs/AGENTS.md)
 
 ## 许可
 
